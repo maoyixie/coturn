@@ -15,16 +15,18 @@ build(){
 
    mkdir FuzzStun_Corpus
    mkdir FuzzStunClient_Corpus
+   mkdir FuzzStun2_Corpus
 }
 
 run(){
    DIR=build/fuzzing
-   if [ $1 == '0' ]
-   then
-      ./$DIR/FuzzStun   $DIR/FuzzStun_Corpus/   $DIR/FuzzStun_seed_corpus
-   else
-      ./$DIR/FuzzStunClient   $DIR/FuzzStunClient_Corpus/   $DIR/FuzzStunClient_seed_corpus
-   fi   
+   # if [ $1 == '0' ]
+   # then
+   #    ./$DIR/FuzzStun   $DIR/FuzzStun_Corpus/   $DIR/FuzzStun_seed_corpus
+   # else
+   #    ./$DIR/FuzzStunClient   $DIR/FuzzStunClient_Corpus/   $DIR/FuzzStunClient_seed_corpus
+   # fi
+   ./$DIR/FuzzStun2   $DIR/FuzzStun2_Corpus/
 }
 
 help(){
