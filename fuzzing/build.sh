@@ -16,6 +16,7 @@ build(){
    mkdir FuzzStun_Corpus
    mkdir FuzzStunClient_Corpus
    mkdir FuzzStun2_Corpus
+   mkdir FuzzStun3_Corpus
 }
 
 run(){
@@ -26,7 +27,8 @@ run(){
    # else
    #    ./$DIR/FuzzStunClient   $DIR/FuzzStunClient_Corpus/   $DIR/FuzzStunClient_seed_corpus
    # fi
-   ./$DIR/FuzzStun2   $DIR/FuzzStun2_Corpus/
+   # ./$DIR/FuzzStun2   $DIR/FuzzStun2_Corpus/
+   # ./$DIR/FuzzStun3   $DIR/FuzzStun3_Corpus/
 }
 
 help(){
