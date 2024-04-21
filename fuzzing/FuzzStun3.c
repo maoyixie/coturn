@@ -21,7 +21,7 @@ extern int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size) {
   if (!buf) {
     return 0;
   }
-  memcpy(buf, Data, Size);
+  memcpy(buf, Data, Size); // bug: heap buffer overflow
   memset(buf + Size, 0, adjustedSize - Size);
 
   // Fuzz the target function
